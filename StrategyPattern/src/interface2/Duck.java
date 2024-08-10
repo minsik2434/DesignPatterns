@@ -11,8 +11,12 @@ public abstract class Duck {
      */
     FlyBehavior flyBehavior;
     QuackBehavior quackBehavior;
-    abstract void swim();
-    abstract void display();
+
+    public void swim() {
+        System.out.println("수영");
+    }
+
+    public abstract void display();
 
     public void performQuack(){
         quackBehavior.quack();
@@ -20,5 +24,18 @@ public abstract class Duck {
 
     public void performFly(){
         flyBehavior.fly();
+    }
+
+    public Duck(){
+
+    }
+
+    //setter 메서드 추가해 실행 시점에 동적으로 바꿀 수 있음
+    public void setFlyBehavior(FlyBehavior fb){
+        flyBehavior = fb;
+    }
+
+    public void setQuackBehavior(QuackBehavior qb){
+        quackBehavior = qb;
     }
 }

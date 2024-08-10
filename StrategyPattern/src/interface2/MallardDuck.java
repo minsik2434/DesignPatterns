@@ -10,12 +10,12 @@ public class MallardDuck extends Duck{
         flyBehavior = new FlyWithWings();
     }
     @Override
-    void swim() {
+    public void swim() {
 
     }
 
     @Override
-    void display() {
+    public void display() {
 
     }
 }
