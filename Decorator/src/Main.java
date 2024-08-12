@@ -5,6 +5,12 @@ import decorator.beverage.HouseBlend;
 import decorator.decorator.Mocha;
 import decorator.decorator.Soy;
 import decorator.decorator.Whip;
+import javaIO.LowerCaseInputStream;
+
+import java.io.BufferedInputStream;
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.io.InputStream;
 
 public class Main {
     public static void main(String[] args) {
@@ -26,5 +32,23 @@ public class Main {
 
         System.out.print("beverage3.getDescription() = " + beverage3.getDescription());
         System.out.println(" beverage3.cost() = " + beverage3.cost());
+
+        // -*******************************************-
+        int c;
+
+        try{
+            InputStream in = new LowerCaseInputStream(
+                    new BufferedInputStream(
+                            new FileInputStream("/Users/choiminsik/Desktop/DesignPatterns/Decorator/test.txt")));
+
+            while((c = in.read()) >=0){
+                System.out.print((char)c);
+            }
+            in.close();
+        }
+        catch (IOException e){
+            e.printStackTrace();
+        }
+
     }
 }
