@@ -17,5 +17,9 @@ public class Main {
         pizza = chicagoStore.orderPizza("cheese");
         System.out.println("시카고 스타일 피자 주문" + pizza.getName());
 
+
+        factory3.PizzaStore nyPizzaStore = new factory3.NYPizzaStore();
+        nyPizzaStore.orderPizza("cheese");
+
     }
 }
