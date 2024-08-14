@@ -32,6 +32,7 @@ public class RemoteLoader {
         remoteControl.setCommand(1, kitchenLightOn, kitchenLightOff);
         remoteControl.setCommand(2, ceilingFanOn, ceilingFanOff);
         remoteControl.setCommand(3, stereoOnWithCD, stereoOff);
+        remoteControl.setCommand(4, garageDoorUp,garageDoorDown);
 
         System.out.println("remoteControl = " + remoteControl);
 
