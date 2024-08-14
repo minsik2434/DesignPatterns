@@ -13,6 +13,8 @@ public class RemoteControl {
         offCommands = new Command[7];
 
         //초기화를 위한 Command 객체
+        //null 객체를 넣어 해당 메서드를 호출해도 아무 문제가 발생하지 않는다
+        //null 객체는 여러 디자인 패턴에서 유용하게 쓰인다 그래서 널 객체를 일종의 디자인 패턴으로 분류하기도 한다
         Command noCommand = new NoCommand();
         for(int i=0; i<7; i++){
             onCommands[i] = noCommand;
