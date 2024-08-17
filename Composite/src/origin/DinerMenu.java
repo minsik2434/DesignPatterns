@@ -1,4 +1,4 @@
-package iterator2;
+package origin;
 
 import java.util.Iterator;
 
@@ -25,6 +25,7 @@ public class DinerMenu implements Menu{
             numberOfItems = numberOfItems + 1;
         }
     }
+
     @Override
     public Iterator<MenuItem> creatIterator() {
         return new DinerMenuIterator(menuItems);
