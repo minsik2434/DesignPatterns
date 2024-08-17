@@ -14,6 +14,7 @@ public class DinerMenu implements Menu{
         addItem("BLT", "통밀 위에 베이컨, 상추, 토마토를 얹은 메뉴", false, 2.99);
         addItem("오늘의 스프", "감자 샐러드를 곁들인 오늘의 스프", false, 3.29);
         addItem("핫도그", "사워크라우트, 갖은 양념, 양파, 치즈가 곁들여진 핫도그", false, 3.05);
+
     }
 
     public void addItem(String name, String description, boolean vegetarian, double price){
@@ -28,6 +29,6 @@ public class DinerMenu implements Menu{
 
     @Override
     public Iterator<MenuItem> creatIterator() {
-        return new DinerMenuIterator(menuItems);
+        return new AlternatingDinerMenuIterator(menuItems);
     }
 }
