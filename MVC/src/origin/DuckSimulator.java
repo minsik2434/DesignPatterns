@@ -40,15 +40,13 @@ public class DuckSimulator {
         flockOfDucks.add(flockOfMallards);
 
         System.out.println("전체 무리");
-        simulate(flockOfDucks);
-
         System.out.println("오리 물오리");
         simulate(flockOfMallards);
 
         System.out.println("옵저버 추가");
         Quacklogist quacklogist = new Quacklogist();
         flockOfDucks.registerObserver(quacklogist);
-
+        simulate(flockOfDucks);
         System.out.println("오리가 소리낸 횟수 " + QuackCounter.getQuacks() + " 번");
 
     }
